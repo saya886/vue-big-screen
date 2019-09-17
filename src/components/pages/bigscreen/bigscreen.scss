@@ -1,0 +1,110 @@
+
+.content{
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+/* global */
+* {margin:0;padding:0;box-sizing:border-box;}
+#local_div {
+    width:100%;
+    height:100%;
+    min-width:1200px;
+    min-height:600px;
+    overflow:hidden;
+    // border: 10px red;
+    // box-shadow: inset 0px 0px 100px 2px red;
+}
+#local_div {
+    position:relative;
+    font-family:"Microsoft Yahei", Arial, sans-serif;
+    background:#010307;
+}
+
+/* layout */
+#header {
+    position:relative;
+    height:72px;
+    background:url("../../../../static/imgs/template_bg/tem1/header.png") 0 0 / 100% 100% no-repeat;
+    overflow:hidden;
+}
+.header-title {
+    line-height:64px;
+    text-align:center;
+    font-size:32px;
+    font-weight:400;
+    color:#fff;
+    text-shadow: 0px 0px px rgba(0, 255, 255, 0.83);
+}
+.header-info {position:absolute;top:36px;font-size:18px;color:#73aae5;}
+.header-info-l {left:20px;}
+.header-info-r {right:20px;}
+#footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:24px;
+    background:url("../../../../static/imgs/template_bg/tem1/footer.png") 0 0 / 100% 100% no-repeat;
+}
+#container {
+    position:absolute;
+    top:72px;
+    bottom:24px;
+    left:0;
+    right:0;
+}
+
+#item_container{
+    padding: 50px;
+    top:0px;
+    left: 0px;
+    display: grid;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.item {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border: 4px solid #4BA0E3;
+    background-color: rgba(3, 12, 30, 0.71);
+    box-shadow: inset 0px 0px 100px 2px rgba(16, 81, 139, 0.78);
+    animation: breath_2 5s alternate infinite;
+    }
+
+
+.item-2 {
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.item-4 {
+    animation: breath_3 0.5s alternate infinite;
+}
+
+
+@keyframes breath_2{
+    0%   {box-shadow: 0 0 10px 10px hsl(191,100%,85%)}
+	25%  {box-shadow: 0 0 25px 10px hsl(191,100%,80%)}
+	50%  {box-shadow: 0 0 50px 10px hsl(191,100%,60%)}
+    75%  {box-shadow: 0 0 25px 10px hsl(191,100%,40%)}
+    100%   {box-shadow: 0 0 10px 10px hsl(191,100%,20%)}
+}
+
+@keyframes breath_3{
+    0%   {box-shadow: 0 0 10px 10px hsl(0,100%,60%);margin: 0px;}
+	25%  {box-shadow: 0 0 10px 10px hsl(0,100%,60%);margin: 1px;}
+	50%  {box-shadow: 0 0 50px 10px hsl(0,100%,60%);margin: 1px;}
+    75%  {box-shadow: 0 0 25px 10px hsl(0,100%,40%);margin: 2px;}
+    100%   {box-shadow: 0 0 10px 10px hsl(0,100%,20%);margin: 3px;}
+}

@@ -15,7 +15,7 @@
     "echarts": "^4.0.4",
     "echarts-gl": "^1.1.1",
     "echarts-liquidfill": "^2.0.0",
-    "gsap": "^1.20.4",
+    "gsap": "^3.6.0",
     "iview": "^2.8.0",
     "lodash": "^4.17.10",
     "vue": "^2.5.2",
